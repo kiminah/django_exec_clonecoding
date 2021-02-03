@@ -1,0 +1,24 @@
+@charset "UTF-8";
+/* Image.css */
+
+
+.Image{
+    width:80%;
+    margin-left:200px;
+    margin-bottom:25px;
+
+    text-align:initial;
+    }
+
+.subImageBox {
+    padding:20px;
+    color:#ffffff;
+    }
+
+.mainImage_href_button {
+    background-color:#ffffff;
+    color:#32CD32;
+    border-radius:5px;
+    height:40px;
+    cursor:pointer;
+    }

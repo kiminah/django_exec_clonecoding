@@ -1,0 +1,51 @@
+{% extends "accounts/layout.html" %}
+
+{% block content %}
+<!-- 회원가입 화면 영역 -->
+<section id="section_sign">
+	<form method="GET" action="" name="signup_info">
+		<div id="signup_area">
+			<div id="sign_top">
+				<h2>회원가입</h2>
+			</div>
+			<div id="sign_middle">
+				<div id="sign_user">
+					<label class="label_sign">
+						<span class="span_sign">이메일</span>
+						<input id="sign_email" type="text" required>
+					</label>
+					<label class="label_sign">
+						<span class="span_sign">이메일 확인</span>
+						<input id="sign_email_check" type="text" required>
+					</label>
+					<label class="label_sign">
+						<span class="span_sign">비밀번호</span>
+						<input id="sign_pw" type="password" required>
+					</label>
+					<label class="label_sign">
+						<span class="span_sign">비밀번호 확인</span>
+						<input id="sign_pw_check" type="password" required>
+					</label>
+				</div>
+				<div id="sign_sns">
+					<div id="social_sign">
+							<a id="sign_fb" href="https://facebook.com/dialog/oauth?response_type=code&client_id=1101702136522636&redirect_uri=https%3A%2F%2Fwww.inflearn.com%2Fauth%2Ffacebook&scope=email"><i class="fab fa-facebook-f"></i><span>페이스북 가입</span></a>
+							<a id="sign_go" href="https://accounts.google.com/o/oauth2/v2/auth?access_type=offline&prompt=consent&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile&response_type=code&client_id=887875630717-ror9t8ig4obhvokdij07eoochpqbu5kf.apps.googleusercontent.com&redirect_uri=https%3A%2F%2Fwww.inflearn.com%2Fauth%2Fgoogle"><i class="fab fa-google-plus-g"></i><span>구글 가입</span></a>
+							<a id="sign_git" href="https://github.com/login/oauth/authorize?response_type=code&client_id=5fd8e44b142806d9cbea&redirect_uri=https%3A%2F%2Fwww.inflearn.com%2Fauth%2Fgithub&scope=user%3Aemail"><i class="fab fa-github"></i><span>깃허브 가입</span></a>
+							<a id="sign_ap" href="https://appleid.apple.com/auth/authorize?client_id=com.inflab.inflearn.web&redirect_uri=https://www.inflearn.com/auth/apple&response_type=code id_token&scope=email%20name&response_mode=form_post"><i class="fab fa-apple"></i><span>애플 가입</span></a>
+					</div>
+				</div>
+			</div>
+			<div id="sign_bottom">
+				<label>
+					<span>인프런의 다양한 소식을 받아보시겠어요?</span>
+					<input id="sign_checkbox" type="checkbox">
+				</label>
+				<button id="sign_button" type="submit">가입하기</button>
+			</div>
+
+			<p>가입하기를 클릭함으로써 인프런의 이용약관 개인정보 취급방침에 동의합니다.</p>
+		</div>
+	</form>
+</section>
+{% endblock %}

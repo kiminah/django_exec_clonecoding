@@ -1,0 +1,231 @@
+@charset "UTF-8";
+/* slideShow.css */
+
+#slideShow {
+    width:100%;
+    height:380px;
+    box-shadow:0 0 3px #ccc;
+    margin: 0 auto;
+    text-align:left;
+}
+
+#slideShowBox {
+    width:100vm;
+    height:87%;
+    text-align:center;
+    overflow:hidden;
+}
+
+/* 슬라이드 패널 숨겨진 이미지까지 이미지 전체를 담는 영역 */
+
+#slidePanel {
+    position:relative;
+    width:800%;
+    height:100%;
+    display:flex;
+}
+
+/* 슬라이드 이미지 */
+.slideSet{
+    width:12.5%;
+    display:flex;
+    width:50%;
+    margin:0;
+    background-color:#373672;
+    color:white;
+}
+.slideSet>div {
+    width:50%;
+}
+.slide_left{
+    text-align:left;
+}
+.slide_left{
+    position:relative;
+    margin-top:5%;
+}
+
+.slideTag{
+    position:relative;
+    margin-left:20%;
+}
+
+.slideTag p{
+    display:inline-block;
+    border-radius:5px;
+    padding:1%;
+    font-size:.8rem;
+    font-weight:bold;
+    margin:0;
+    margin-right:1%;
+}
+
+/* slide Tag 배경색 및 글씨색 지정 */
+#slide_tag01 p{color:black;background-color:#f584ae;}
+#slide_tag02 p{color:#FF2E1E;background-color:white;}
+#slide_tag03 p{color:black;background-color:#57e896;}
+#slide_tag04 p{color:white;background-color:#ff2e1e;}
+#slide_tag05 p{color:#1DC078;background-color:white;}
+#slide_tag06 p{color:white;background-color:#00C471;}
+
+
+
+.slide_left>h1 {font-size:2rem;font-weight:bold;margin:0;margin-left:20%;padding-top:10px;}
+.slide_left>p {font-size:1rem; margin-left:20%;}
+
+.slideImage {
+    width:100%;
+    height:100%;
+}
+
+/******************* ControlBox *******************/
+
+#controlBox {
+    margin: 0 auto;
+    width: 80%;
+    height:30px;
+    padding:10px 0;
+    display:flex;
+    align-items:center;
+}
+
+.baseMenu{'color':'#616161','border':'solid 1px #ccc'}
+.clickMenu{{'color':'#24c27c','border':'solid 1px #24c27c'}}
+
+/* Button Box */
+#prevNextButtonBox {
+    width:100px;
+    height:25px;
+    background-color:gray;
+    padding:6px 10px 0;
+    border-radius:50px;
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+}
+
+#showIndex {
+    font-size:1rem;
+    color:white;
+    margin-bottom:5px;
+}
+
+#control-wrapper{
+    position:relative;
+    left:10%;
+}
+#control-wrapper img {
+    width:25%;
+    height:25%;
+    cursor:pointer;
+    display:inline-block;
+}
+
+#divider {
+    margin: 0 1rem;
+    width: 1px;
+    height: 36px;
+    background-color: #dee2e6;
+}
+
+/* slideControlBox */
+
+#slideControlBox{
+    width:100%;
+    overflow:hidden;
+    align-items:center;
+}
+#controlPanel{
+    position:relative;
+    width:500%;
+}
+#controlPanel ul{margin:0;}
+
+#controlPanel li{
+    margin-bottom:5px;
+}
+.slideTotalMenu {
+    float: left;
+    padding: 0 20px 0;
+}
+
+.slideTotalMenu li{
+    display: inline-block;
+    padding: 0 15px 0 15px;
+    margin: 5px 5px 0 0;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    background-color: #fff;
+    border:solid 1px #ccc;
+    border-radius: 50px;
+    font-size:10pt;
+    color:#616161;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+/* 진행중인 모든 이벤트 보는 버튼 */
+
+#listBtnBox div{
+    width:35px;
+    height:35px;
+    background-color:white;
+    border:solid 1px #dee2e6;
+    border-radius:50px;
+    box-shadow:0 2px 8px 0 rgb(0 0 0 / 10%);
+    margin-left:10px;
+    cursor:pointer;
+}
+#listBtnBox img{
+    position:relative;
+    width:15px;
+    height:15px;
+    text-align:center;
+    left:30%;
+    top:25%;
+}
+
+/******************* subControl Box *******************/
+
+#subControlBox{
+    position:absolute;
+    right:3%;
+    margin-right:5%;
+    width:45%;
+    border:solid 1px #ccc;
+    border-radius:20px;
+    box-shadow:0 0 3px gray;
+    background-color:white;
+    z-index:9;
+    display:none;
+}
+.show{display:block;}
+.hide{display:none;}
+
+/* subControl 상단 */
+
+#subControlTitle{
+    height:40px;
+    display:flex;
+    border-bottom:solid 1px #ccc;
+    align-items:center;
+    justify-content: space-between;
+    padding:0 20px;
+    font-size:1rem;
+    margin:10px;
+}
+
+#closeBox {
+    color:gray;
+    text-decoration:underline;
+    font-size:1rem;
+    cursor:pointer;
+}
+/* subControl 하단 */
+
+#subControl {
+    height:100%;
+    display: inline-block;
+}
+

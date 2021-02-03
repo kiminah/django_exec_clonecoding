@@ -1,0 +1,212 @@
+@charset "UTF-8";
+
+
+#community_header{
+    background-color: #333b3d;
+    padding: .5rem;
+    color: #fff;
+    text-align: initial;
+    }
+
+#community_container{
+    margin: 0 auto;
+    position: relative;
+    width: 80%;
+}
+
+#community_container h2{
+margin: 0;
+font-weight: 400;
+font-size: 2rem;
+}
+
+#community_container p{
+font-size: 16px;
+}
+
+#community_main{
+    width:80%;
+    margin: 0 auto;
+    position: relative;
+    min-height: 500px;
+}
+
+#column_sidebar_left{
+    width:16%;
+    text-align:initial;
+    float: left;
+    display: inline-block;
+}
+.menu-label{
+    margin-bottom:1em;
+    color: #cfcfcf;
+    font-size: .75em;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+}
+.menu-label:last-child{
+    margin-top:1em;
+}
+.menu-list {
+    line-height: 1.25;
+}
+.menu-list img{
+    width:17px;
+}
+
+.menu-list a {
+    border-radius: 2px;
+    color: #454545;
+    display: block;
+    padding: .2em .75em;
+    text-decoration:none;
+}
+#question{
+    margin: 20px 10px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.3em;
+    padding: .4em .75em;
+    color: #fff;
+    background: #ff7867;
+    border-radius: 4px;
+    border: 1px solid #dbdbdb;
+}
+#menu-list1{
+    font-weight: bold;
+    color: #00c471;
+}
+
+/*******************column_middle******************/
+#column_middle{
+    width:65%;
+    display: inline-block;
+    float:left;
+}
+#column_middle_pad{
+    padding: .75rem;
+}
+#column_middle_box{
+margin: .5rem 0 1rem;
+height:36px;
+}
+#community_control{
+    display: inline-block;
+    float: left;
+}
+#community_control{
+    box-sizing: border-box;
+    clear: both;
+    font-size: 1rem;
+    position: relative;
+    text-align: left;
+    }
+.control_order{
+    float:left;
+    margin-left: .5rem;
+}
+
+.select_box {
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+}
+
+
+.select_menu {
+    background-color: #fff;
+    color: #363636;
+    cursor: pointer;
+    display: block;
+    font-size: 1em;
+    max-width: 100%;
+    outline: none;
+    align-items: center;
+    border: 1px solid #dbdbdb;
+    border-radius: 4px;
+    box-shadow: none;
+    display: inline-flex;
+    font-size: 1rem;
+    height: 2.25em;
+    justify-content: flex-start;
+    line-height: 1.5;
+    padding: calc(.375em - 1px) calc(.625em - 1px);
+    position: relative;
+    vertical-align: top;
+}
+.select_menu:hover{
+    border: 1px solid #000000;
+}
+
+#community_search{
+    display:inline-block;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    float: right;
+    margin-left: auto;
+}
+#community_search_box{
+    line-height: 1.6;
+    margin-left: auto;
+    height: 36px;
+    padding: 0;
+    border-radius: 3px;
+    box-shadow: none;
+    background-color: #f6f6f6;
+    color: #5f5f5f;
+    border: 1px solid transparent;
+    font-size: .9375rem;
+    height: 100%;
+    vertical-align:middle;
+}
+
+#community_search_box p{
+    display: inline-block;
+    margin:0px;
+    background-color: #3298dc;
+    border-color: transparent;
+    color: #fff;
+    cursor: pointer;
+    justify-content: center;
+    padding: calc(.375em - 1px) .75em;
+    text-align: center;
+    white-space: nowrap;
+    align-items: center;
+    border: 1px solid transparent;
+    border-radius: 0 4px 4px 0px;
+    box-shadow: none;
+    line-height: 1.5;
+    display: inline-flex;
+}
+#community_search_box input{
+    padding: 0;
+    border-radius: 3px;
+    box-shadow: none;
+    background-color: #f6f6f6;
+    color: #5f5f5f;
+    border: 1px solid transparent;
+    font-size: .9375rem;
+    height: 100%;
+    vertical-align:middle;
+}
+input:focus {outline:none;}
+/***********************************************/
+#column_sidebar_right{
+    width: 19%;
+    float: right;
+    text-align: inherit;
+}
+#column_right_pad{
+    padding: 1.75rem;
+}
+#column_sidebar_right h5{
+    font-size: 1.25rem;
+    font-weight: 900;
+    margin:0;
+    text-align: initial;
+}
+#column_sidebar_right i{
+    color: #fdcc11;
+}
+

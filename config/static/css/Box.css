@@ -1,0 +1,70 @@
+@charset "UTF-8";
+/* Box.css */
+
+.Box {
+    background-color:#eeeeee;
+    text-align:initial;
+    }
+
+.mainHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+.header {
+    width:60%;
+    height:80px;
+    }
+
+.mainBox {
+    background-color:#eeeeee;
+    margin-top:30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+#Box_1 {
+    width: 16%;
+    height: 250px;
+    padding: 30px;
+    border: 1px solid #bcbcbc;
+    background-color:#ffffff;
+    display:inline-block;
+    margin-bottom:20px;
+    }
+
+#Box_2 {
+    width: 16%;
+    height: 250px;
+    padding: 30px;
+    border: 1px solid #bcbcbc;
+    background-color:#ffffff;
+    display:inline-block;
+    margin-left:20px;
+    margin-right:20px;
+    margin-bottom:20px;
+    }
+
+#Box_3 {
+    width: 16%;
+    height: 250px;
+    padding: 30px;
+    border: 1px solid #bcbcbc;
+    background-color:#ffffff;
+    display:inline-block;
+    margin-bottom:20px;
+    }
+
+.mainBox_href_button {
+    background-color:#00ff83;
+    color:#fff;
+    width:170px;
+    border-radius:20px;
+    height:30px;
+    font-weight:bolder;
+    border:0px;
+    margin-top:50px;
+    cursor:pointer;
+    }

@@ -1,0 +1,105 @@
+@charset "UTF-8";
+
+/*** signup.css ***/
+
+#section_sign{
+    width: 100vw;
+    height: 100vh;
+}
+#sign_top h2{
+    color:#454545;
+    margin-bottom: 80px;
+
+}
+#sign_middle{
+    display: inline-block;
+}
+
+#signup_area{
+    position: absolute;
+    top: calc( 50% - 200px );
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#sign_user{
+    display: inline-block;
+    float: left;
+    width: 60%;
+}
+
+#sign_user label{
+    display: block;
+    float: left;
+    width: 100%;
+}
+#sign_sns{
+    display: inline-block;
+    float: right;
+    width: 40%;
+}
+#sign_sns a{
+    display: block;
+    border: 1px solid #ccc;
+    padding: 14.7px;
+    margin-bottom: 18px;
+    width: 60%;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.span_sign{
+    display: inline-block;
+    width: 110px;
+    text-align: initial;
+    color:#454545;
+    }
+.label_sign input{
+    padding: 6px;
+    margin-bottom: 18px;
+    height: 37px;
+    width: 54%;
+    border: 1px solid #d4d4d4;
+}
+#sign_fb{
+    background-color: #335ca6;
+    color:#fff;
+}
+#sign_go{
+    background-color: #c65545;
+    color:#fff;
+}
+#sign_git{
+    background-color: #3c4043;
+    color:#fff;
+}
+#sign_ap{
+    color: #3c4043
+}
+#sign_bottom{
+}
+#sign_bottom label{
+    display:block;
+}
+#sign_bottom span{
+    color:#454545;
+}
+#sign_bottom button{
+    border: none;
+    margin-top: 20px;
+    width: 340px;
+    height: 45px;
+    background: #1dc078;
+    font-size: 17px
+    font-weight: 800;
+    color: #fff;
+}
+
+#section_sign p{
+    width: 340px;
+    margin: 0 auto;
+    text-align: initial;
+    margin-top: 10px;
+    font-size: 10px;
+    color:#797979;
+}

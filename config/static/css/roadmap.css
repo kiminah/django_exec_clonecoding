@@ -1,0 +1,59 @@
+@charset "UTF-8";
+/* roadmap.css
+ * 기본 토대는 ready_lecture.css 에 존재
+ */
+
+ #roadmap {margin-top:20px;height:20%;}
+
+#roadContent{position:relative; margin-left:3px;}
+
+#roadContent div {display:inline-block;}
+
+#roadmap .contents{
+    display:inline-block;
+    width:9.8%;
+    vertical-align:top;
+}
+#roadContent .basicBox {
+    width:100%;
+    vertical-align:top;
+    margin-right:5px;
+    cursor:pointer;
+}
+
+#roadContent .basicBox div{margin:-10px 20px 0;}
+
+#roadContent .basicBox h5{font-size:1rem;}
+
+
+#prevBtn03 {
+    z-index: 20;
+    position: absolute;
+    top: 30%;
+    left: 8%;
+    float: left;
+    width: 35px;
+    height: 35px;
+    background-color: #fff;
+    border: solid 1px #dee2e6;
+    border-radius: 50px;
+    box-shadow: 0 2px 8px 0 rgb(0 0 0 / 10%);
+    padding: 5px;
+    padding-top: 6px;
+}
+
+#nextBtn03 {
+    z-index: 20;
+    position: absolute;
+    top: 30%;
+    right: 8%;
+    float: right;
+    width: 35px;
+    height: 35px;
+    background-color: #ffffffc9;
+    border: solid 1px #dee2e6;
+    border-radius: 50px;
+    box-shadow: 0 2px 8px 0 rgb(0 0 0 / 10%);
+    padding: 5px;
+    padding-top: 6px;
+}

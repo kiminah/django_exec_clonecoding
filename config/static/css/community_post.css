@@ -1,0 +1,103 @@
+@charset "UTF-8";
+
+
+.community_post_left{
+    text-align: initial;
+    display: inline-block;
+    width: 80%;
+}
+.community_post_right{
+display: inline-block;
+width: 19%;
+}
+.community_title{
+    font-size: 1.5rem;
+    line-height: 1.8;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.community_title span{
+    color:#1dc078;
+}
+.community_title a{
+    color: currentColor;
+    text-decoration: none;
+    cursor: pointer;
+}
+.community_mata span{
+    font-size: .75rem;
+    margin-top: .25rem;
+    color: #595959;
+    }
+.community_post_right div{
+    margin-bottom:5px;
+}
+.community_mata span+span {
+    margin-left: .5rem;
+}
+.community_post_right a{
+    color: currentColor;
+    text-decoration: none;
+    cursor: pointer;
+    border: 1px solid;
+    padding: 1px;
+    font-size: .8125rem;
+    padding: 4px;
+    border: 1px solid #dbdbdb;
+    border-radius: 3px;
+    color: #363636;
+}
+.recommended{
+    color:#ff7867;
+}
+.community_post{
+    margin-bottom: 1.4rem;
+}
+
+.community_post+.community_post {
+    border-top: 1px solid hsla(0,0%,85.9%,.5);
+    padding-top: 1rem;
+}
+.column_people_profile{
+    display: inline-block;
+    height: 48px;
+    width: 48px;
+    float: left;
+}
+.column_people_profile img{
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 290486px;
+    height: 48px;
+    width: 48px;
+}
+.column_people_name{
+    float: left;
+    padding: 13.2px;
+}
+#column_people ul{
+}
+#column_people ul li{
+}
+.column_people_name p{
+margin:0;
+}
+.column_people_name{
+display: inline-block;
+}
+
+.column_people_name a{
+    color: currentColor;
+    text-decoration: none;
+    }
+
+.column_people_list{
+    height: 48px;
+    margin-top: 20px;
+    }

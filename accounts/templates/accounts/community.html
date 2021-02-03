@@ -1,0 +1,153 @@
+{% extends "accounts/layout.html" %}
+{% block content %}
+<!-- 커뮤니티 화면이 들어올 영역 -->
+<section id="community_header">
+	<div id="community_container">
+		<h2>묻고 답해요.</h2>
+		<p>40만명이 함께하는 인프런 커뮤니티 <br>
+		모르면 묻고, 해답을 찾아보세요. </p>
+	</div>
+</section>
+<!-- column_hearder끝 -->
+
+<section id="community_main">
+	<div id="community_columns">
+		<aside id="column_sidebar_left">
+			<div id="column_menu">
+				<p class="menu-label">함께 공부해요</p>
+				<ul class="menu-list">
+					<li><a href="#" id="menu-list1"><img src="image/chat-bubble.png"> 묻고 답하기</a></li>
+					<li><a href="#"><img src="image/star-gray.png"> 수강평 모아보기</a></li>
+					<li><a href="#"><img src="image/quill.png"> 글 모아보기</a></li>
+				</ul>
+
+				<p class="menu-label">인프런</p>
+				<ul class="menu-list">
+					<li><a href="#"><img src="image/poetry-gray.png"> 인프런 블로그</a></li>
+					<li><a href="#"><img src="image/megaphone.png"> 인프런 공지사항</a></li>
+					<li><a href="#"><img src="image/chat.png"> 강의기능요청</a></li>
+					<li><a href="#"><img src="image/quill.png"> 인프런 소개</a></li>
+					<li><a href="#" id="question">질문 작성</a></li>
+				</ul>
+			</div>
+
+		</aside>
+
+		<div id="column_middle">
+			<div id="column_middle_pad">
+				<div id="column_middle_box">
+					<div id="community_control">
+						<div class="control_order">
+							<div class="select_box">
+								<select class="select_menu">
+									<option value>해결/미해결</option>
+									<option value="not_resolved">미해결 질문</option>
+									<option value="resolved">해결 질문</option>
+								</select>
+							</div>
+						</div>
+
+						<div class="control_order">
+							<div class="select_box">
+								<select class="select_menu">
+									<option value="recent">최신순</option>
+									<option value="comment_recent">최근답변순</option>
+									<option value="comment">미 답변순</option>
+									<option value="recommend">추천순</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div id="community_search">
+						<div id="community_search_box">
+							<input type="text">
+							<p id="community_search_but">검색</p>
+						</div>
+					</div>
+				</div>
+				<!---column_middle_box 끝 (select, 검색창)---------------->
+				<div id="community_list_box">
+					<div id="community_list">
+						<div class="community_post">
+							<div class="community_post_left">
+								<div class="community_title"><span class="q_post">Q.</span><a href="#">포스트 제목이 들어가는 자리</a></div>
+								<div class="community_mata"><span class="author">글쓴이: 양세빈</span><span class="updated_at">시간: 2분 전</span><span class="course">강의명: 초보를 위함 도커 안내서:</span></div>
+							</div>
+							<div class="community_post_right">
+								<div class="comment_state">미답변</div>
+								<div class="recommended">❤0</div>
+								<a href="#" class="question_btn">질문으로 가기</a>
+							</div>
+						</div><!--community_post끝-->
+						<div class="community_post">
+							<div class="community_post_left">
+								<div class="community_title"><span class="q_post">Q.</span><a href="#">포스트 제목이 들어가는 자리</a></div>
+								<div class="community_mata"><span class="author">글쓴이: 양세빈</span><span class="updated_at">시간: 2분 전</span><span class="course">강의명: 초보를 위함 도커 안내서:</span></div>
+							</div>
+							<div class="community_post_right">
+								<div class="comment_state">미답변</div>
+								<div class="recommended">❤0</div>
+								<a href="#" class="question_btn">질문으로 가기</a>
+							</div>
+						</div><!--community_post끝-->
+
+
+				<!-- 커뮤니티 글이 들어가는 자리 -->
+
+
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<!--column_middle끝---------------->
+
+		<aside id="column_sidebar_right">
+			<div id="column_right_pad">
+			<h5>감사한 분들👑</h5>
+			<div id="column_people">
+				<ul>
+					<li>
+						<div class="column_people_list">
+							<div class="column_people_profile">
+								<img src="image/br.jpg">
+							</div>
+							<div class="column_people_name">
+								<p>
+									<a href="#">이름</a>
+								</p>
+							</div>
+						</div>
+					</li>
+
+					<li>
+						<div class="column_people_list">
+							<div class="column_people_profile">
+								<img src="image/br.jpg">
+							</div>
+							<div class="column_people_name">
+								<p>
+									<a href="#">이름</a>
+								</p>
+							</div>
+						</div>
+					</li>
+
+
+					<!-- li 추가 -->
+
+
+
+
+				</ul>
+			</div><!-- 감사한분들 끝 -->
+			</div>
+		</aside>
+
+
+
+
+	</div>
+</section>
+<!-- community_main끝 -->
+{% endblock %}

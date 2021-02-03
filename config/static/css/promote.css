@@ -1,0 +1,54 @@
+@charset "UTF-8";
+/* promote.css */
+
+.Promote {
+     display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom:5px;
+    text-align:initial;
+    }
+
+.mainPromote {
+    width:25%;
+    height:250px;
+    padding:15px;
+    margin-right:50px;
+    }
+
+.name {
+    color:#A9A9A9;
+    }
+
+.date {
+    color:#A9A9A9;
+    }
+
+#people_1 {
+    color:#00ff40;
+    }
+
+.scroll_bottom {
+    margin-top:30px;
+    }
+
+.text_3 {
+    color:#000000;
+    text-decoration:none;
+    }
+
+.buttons_1 {
+    background:#fff;
+    border:1px solid #00ff00;
+    margin-top:15px;
+    padding:5px;
+    cursor:pointer;
+    }
+
+.review_scroll {
+    width:700px;
+    height:135px;
+    border: 1px solid #bcbcbc;
+    padding:10px;
+    margin-bottom:20px;
+    }

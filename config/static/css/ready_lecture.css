@@ -1,0 +1,86 @@
+@charset "UTF-8";
+/* ready_lecture.css */
+
+/************************* Prev/Next Button **************************/
+
+#prevBtn02 {
+    z-index: 20;
+    position: absolute;
+    top: 20%;
+    left: 8%;
+    float: left;
+    width: 35px;
+    height: 35px;
+    background-color: #fff;
+    border: solid 1px #dee2e6;
+    border-radius: 50px;
+    box-shadow: 0 2px 8px 0 rgb(0 0 0 / 10%);
+    padding: 5px;
+    padding-top: 6px;
+}
+
+#nextBtn02 {
+    z-index: 20;
+    position: absolute;
+    top: 20%;
+    right: 8%;
+    float: right;
+    width: 35px;
+    height: 35px;
+    background-color: #ffffffc9;
+    border: solid 1px #dee2e6;
+    border-radius: 50px;
+    box-shadow: 0 2px 8px 0 rgb(0 0 0 / 10%);
+    padding: 5px;
+    padding-top: 6px;
+}
+
+
+/************************* Ready Content **************************/
+
+/* ready content */
+.content_view{width:100%;margin-bottom:5px;}
+
+#ready_content{ height:100%;}
+
+#ready_content .contents{
+    margin:0;
+}
+/****** BASIC ********/
+
+#ready_content .basicBox{position:relative;}
+
+.starPoint {
+    position:relative;
+    display:flex;
+    align-items:center;
+    width:100%;
+    margin-bottom:5px;
+}
+
+.starPoint p{
+    width:50px;
+    margin:0
+}
+
+.contentTag{display:flex;margin-top:10px;}
+.contentTag div{
+    height:15px;
+    margin-right:10px;
+    margin-top:10px;
+    border-radius:5px;
+    padding:5px;
+}
+.contentTag .discount_tag{background-color:hsl(1,100%,89%)}
+.contentTag .new_tag{background-color:hsl(182,75%,94%);}
+.contentTag .count_tag{background-color:hsl(321,63%,90%);}
+
+.contentTag div p{
+    font-size:.5rem;
+    margin:0;
+}
+
+
+/****** HOVER *******/
+
+/* 기본은 lecture.css에 존재 */

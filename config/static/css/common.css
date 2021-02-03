@@ -1,0 +1,25 @@
+@charset "UTF-8";
+/* common.css */
+
+body {
+    margin:0;
+}
+
+#wrap{
+    width:100%;
+    margin:0 auto;
+    background-color:#fff;
+    text-align:center;
+    position:relative;
+}
+
+img {
+    border:0;
+    margin:0;
+}
+
+ul {
+    margin-top:0;
+    padding:0;
+    list-style:none; /*기호 제거*/
+}
