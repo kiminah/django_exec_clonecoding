@@ -125,3 +125,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS=[
     os.path.join(BASE_DIR, 'config','static')
 ]
+
+
+# login 시 강제 페이지 이동경로
+LOGIN_REDIRECT_URL="/"

@@ -5,5 +5,5 @@ app_name='accounts'
 
 urlpatterns=[
     path('signup/', signup, name='signup'),
-    path('community/', community, name='commnunity'),
+    path('community/', community, name='community'),
 ]

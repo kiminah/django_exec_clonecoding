@@ -3,29 +3,31 @@
 {% block content %}
 <!-- 회원가입 화면 영역 -->
 <section id="section_sign">
-	<form method="GET" action="" name="signup_info">
+	<form method="POST" action="{% url 'accounts:signup' %}" name="signup_info">
+		{% csrf_token %}
 		<div id="signup_area">
 			<div id="sign_top">
 				<h2>회원가입</h2>
 			</div>
 			<div id="sign_middle">
 				<div id="sign_user">
-					<label class="label_sign">
+					<label class="label_sign" for="username">
 						<span class="span_sign">이메일</span>
-						<input id="sign_email" type="text" required>
+						<input id="sign_email" type="text" name="username" required>
 					</label>
-					<label class="label_sign">
-						<span class="span_sign">이메일 확인</span>
-						<input id="sign_email_check" type="text" required>
-					</label>
-					<label class="label_sign">
+<!--					<label class="label_sign">-->
+<!--						<span class="span_sign">이메일 확인</span>-->
+<!--						<input id="sign_email_check" type="text" name="username_check" required>-->
+<!--					</label>-->
+					<label class="label_sign" for="password1">
 						<span class="span_sign">비밀번호</span>
-						<input id="sign_pw" type="password" required>
+						<input id="sign_pw" type="password" name="password1" required>
 					</label>
-					<label class="label_sign">
+					<label class="label_sign" for="password2">
 						<span class="span_sign">비밀번호 확인</span>
-						<input id="sign_pw_check" type="password" required>
+						<input id="sign_pw_check" type="password" name="password2" required>
 					</label>
+<!--					{{ form.as_p }}-->
 				</div>
 				<div id="sign_sns">
 					<div id="social_sign">

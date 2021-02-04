@@ -68,7 +68,7 @@
 				</div>
 				<div class="pw_menu">
 					<h4>아직 인프런 회원이 아니신가요?</h4>
-					<a href="signup.html">회원가입하기</a>
+					<a href="{% url 'accounts:signup'  %}">회원가입하기</a>
 				</div>
 			</div>
 		</div>
@@ -77,13 +77,13 @@
 				<nav>
 					<div id="headerBox">
 						<div id="mainBox">
-							<div id="logoBox"><a href="http://127.0.0.1:8000/"><img src="{% static 'image/logo.png' %}" id="logoImg"></a></div>
+							<div id="logoBox"><a href="/"><img src="{% static 'image/logo.png' %}" id="logoImg"></a></div>
 							<div id="mainMenuBox">
 									<div class="menu-left">
 										<ul>
 											<li id="mainMenu1"><a href="#">강의들<img src="{% static 'image/down-arrow-green.png' %}"></a></li>
 											<li id="mainMenu2"><a href="#">로드맵</a></li>
-											<li id="mainMenu3"><a href="/accounts/community">커뮤니티<img src="{% static 'image/down-arrow-green.png' %}"></a></li>
+											<li id="mainMenu3"><a href="{% url 'accounts:community'  %}">커뮤니티<img src="{% static 'image/down-arrow-green.png' %}"></a></li>
 										</ul>
 									</div>
 							</div> <!-- mainMenuBox 끝 -->
@@ -92,7 +92,7 @@
 								<ul>
 									<li id="knowledge"><a href="#">지식공유참여</a></li>
 									<li><a href="#" id="login">로그인</a></li>
-									<li><a href=" /accounts/signup" id="register">회원가입</a></li>
+									<li><a href="{% url 'accounts:signup'  %}" id="register">회원가입</a></li>
 								</ul>
 							</div>
 						</div>
