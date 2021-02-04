@@ -17,9 +17,7 @@ class SignupForm(UserCreationForm):
         self.fields['username'].validators = [validate_email]
         self.fields['username'].label = '이메일'
 
-    def save(self, commit=True):
+    def save(self):
         user=super().save()
         user.email=user.username
-        if commit:
-            user.save()
         return user
