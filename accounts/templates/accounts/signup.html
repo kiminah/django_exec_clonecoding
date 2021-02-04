@@ -3,31 +3,33 @@
 {% block content %}
 <!-- 회원가입 화면 영역 -->
 <section id="section_sign">
-	<form method="POST" action="{% url 'accounts:signup' %}" name="signup_info">
 		{% csrf_token %}
-		<div id="signup_area">
+	<div >
+	<div id="signup_area">
 			<div id="sign_top">
 				<h2>회원가입</h2>
 			</div>
 			<div id="sign_middle">
 				<div id="sign_user">
-					<label class="label_sign" for="username">
-						<span class="span_sign">이메일</span>
-						<input id="sign_email" type="text" name="username" required>
-					</label>
+					<form method="POST" action="{% url 'accounts:signup' %}">
+<!--					<p class="label_sign" for="username">-->
+<!--						<label class="span_sign">이메일</label>-->
+<!--						<input id="sign_email" type="text" name="username" required>-->
+<!--					</p>-->
 <!--					<label class="label_sign">-->
 <!--						<span class="span_sign">이메일 확인</span>-->
 <!--						<input id="sign_email_check" type="text" name="username_check" required>-->
 <!--					</label>-->
-					<label class="label_sign" for="password1">
-						<span class="span_sign">비밀번호</span>
-						<input id="sign_pw" type="password" name="password1" required>
-					</label>
-					<label class="label_sign" for="password2">
-						<span class="span_sign">비밀번호 확인</span>
-						<input id="sign_pw_check" type="password" name="password2" required>
-					</label>
-<!--					{{ form.as_p }}-->
+<!--					<p class="label_sign" for="password1">-->
+<!--						<label class="span_sign">비밀번호</label>-->
+<!--						<input id="sign_pw" type="password" name="password1" required>-->
+<!--					</p>-->
+<!--					<p class="label_sign" for="password2">-->
+<!--						<label class="span_sign">비밀번호 확인</label>-->
+<!--						<input id="sign_pw_check" type="password" name="password2" required>-->
+<!--					</p>-->
+					{{ form.as_p }}
+					</form>
 				</div>
 				<div id="sign_sns">
 					<div id="social_sign">
@@ -48,6 +50,6 @@
 
 			<p>가입하기를 클릭함으로써 인프런의 이용약관 개인정보 취급방침에 동의합니다.</p>
 		</div>
-	</form>
+	</div>
 </section>
 {% endblock %}
