@@ -25,20 +25,28 @@
 	</head>
 	<body>
 	{% load static %}
-		<div id="modal">
+	<div id="modal">
 			<div id="login_modal">
 				<div id="login_top">
 					<span id="close-button">&times;</span>
 					<img src="{% static 'image/logo.png' %}" id="login_logo">
 				</div>
-				<form method="POST" action="" name="login_info">
-					<div id="login_user">
-						<input id="login_email" type="text" placeholder="이메일" required>
-						<input id="login_pw" type="password" placeholder="비밀번호" required>
+				<div id="login_user">
+					 <form action="{% url 'accounts:login' %}" method="POST">
+						{%csrf_token%}
+						 <p>
+							 <label for="id_username"></label>
+							 <input id="{{form.username.id_for_label}}" name="{{form.username.html_name}}" class="login_email" type="text" placeholder="이메일" required>
+						 </p>
+						 <p>
+							<label for="id_user_password"></label>
+							 <input id="{{form.password.id_for_label}}" name="{{form.password.html_name}}" class="login_pw" type="password" placeholder="비밀번호" required>
+						 </p>
 
 						<input id="login_button" type="submit" value ="로그인">
-					</div>
-				</form>
+					</form>
+				</div>
+
 				<div class="pw_menu">
 					<h4>비밀번호를 잊어버리셨나요?</h4>
 					<a href="#">비밀번호찾기</a>
@@ -53,7 +61,7 @@
 				</div>
 				<div class="pw_menu">
 					<h4>아직 인프런 회원이 아니신가요?</h4>
-					<a href="signup.html">회원가입하기</a>
+					<a href="{% url 'accounts:signup' %}">회원가입하기</a>
 				</div>
 			</div>
 		</div>
@@ -76,8 +84,13 @@
 									<input id="search_input" type="text" placeholder="Search">
 								<ul>
 									<li id="knowledge"><a href="#">지식공유참여</a></li>
-									<li><a href="#" id="login">로그인</a></li>
-									<li><a href=" /accounts/signup" id="register">회원가입</a></li>
+									{% if user.is_authenticated %}
+										<li>{{user.username}}</li>
+										<li><a href="{% url 'accounts:logout' %}">로그아웃</a></li>
+									{% else %}
+										<li><a href="#" id="login">로그인</a></li>
+										<li><a href="{% url 'accounts:signup' %}" id="register">회원가입</a></li>
+									{% endif %}
 								</ul>
 							</div>
 						</div>

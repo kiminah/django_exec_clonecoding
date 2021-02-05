@@ -12,12 +12,18 @@ class LoginForm(forms.ModelForm):
 
 class SignupForm(UserCreationForm):
     # username = forms.CharField(label='사용자명', max_length=20)
+    # username이 email로 사용되도록 변경
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.fields['username'].validators = [validate_email]
         self.fields['username'].label = '이메일'
 
+
     def save(self):
-        user=super().save()
-        user.email=user.username
+        user = super().save()  # User 모델에 먼저 저장
+        # print(type(user))
+        # dir(user)
+        Profile.objects.create(  # Profile model에 create(insert 문과 같음)
+            user=user,
+        )
         return user

@@ -16,5 +16,22 @@ def signup(request):
         form = SignupForm()
     return render(request, 'accounts/signup.html',{'form':form,})
 
-def community(request):
-    return render(request, 'accounts/community.html')
+
+def login_check(request):
+    if request.method== "POST":
+        form=LoginForm(request.POST)
+        name=request.POST.get('username')
+        pwd=request.POST.get('password')
+
+        user=authenticate(username=name, password=pwd)
+
+        if user is not None:
+            login(request,user)
+            return redirect("/")
+        # else :
+        #     return render(request, 'accounts/login_fail.html')
+
+
+def logout(request) :
+    django_logout(request) #기본 로그아웃 기능 사용 - 연결된 세션을 종료
+    return redirect("/")
