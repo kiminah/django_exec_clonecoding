@@ -49,15 +49,8 @@
 				<div id="login_user">
 					 <form action="{% url 'accounts:login' %}" method="POST">
 						{%csrf_token%}
-						 <p>
-							 <label for="id_username"></label>
-							 <input id="{{form.username.id_for_label}}" name="{{form.username.html_name}}" class="login_email" type="text" placeholder="이메일" required>
-						 </p>
-						 <p>
-							<label for="id_user_password"></label>
-							 <input id="{{form.password.id_for_label}}" name="{{form.password.html_name}}" class="login_pw" type="password" placeholder="비밀번호" required>
-						 </p>
-
+						 <input name="username" class="login_email" type="text" placeholder="이메일" required>
+						 <input name="password" class="login_pw" type="password" placeholder="비밀번호" required>
 						<input id="login_button" type="submit" value ="로그인">
 					</form>
 				</div>
