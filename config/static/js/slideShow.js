@@ -58,12 +58,12 @@ $(function(){
         function(){
             var status = $('#control-wrapper img:nth-child(2)').attr('id') // pause 버튼 상태 변수
             if(status=='pauseBtn'){
-                $('#pauseBtn').attr('src','image/slide_play.png');
+                $('#pauseBtn').attr('src','static/image/slide_play.png');
                 $('#pauseBtn').attr('id','playBtn');
                 autoPlayStop();
             }
             else{
-                $('#playBtn').attr('src','image/slide_pause.png');
+                $('#playBtn').attr('src','static/image/slide_pause.png');
                 $('#playBtn').attr('id','pauseBtn');
                 autoPlay();
             }
@@ -83,18 +83,18 @@ $(function(){
         $('#subControlBox').toggle(0,'linear');
         var status = $('#subControlBox').css('display');
         if(status=='block'){
-            $('#listBtn img').attr('src','image/up-arrow-green.png');
+            $('#listBtn img').attr('src','static/image/up-arrow-green.png');
             $('#listBtn').css('border','solid 1px #24c27c');
 
         }else{
-            $('#listBtn img').attr('src','image/down-arrow.png');
+            $('#listBtn img').attr('src','static/image/down-arrow.png');
             $('#listBtn').css('border','solid 1px #dee2e6');
         }
     });
 
     // subMenu 안의 [닫기] 버튼 눌렀을 때
     $('#closeBox').on('click',function(){
-        $('#listBtn img').attr('src','image/down-arrow.png');
+        $('#listBtn img').attr('src','static/image/down-arrow.png');
         $('#listBtn').css('border','solid 1px #dee2e6');
         $('#subControlBox').css('display','none');
     });

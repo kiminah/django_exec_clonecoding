@@ -92,9 +92,11 @@
 									<input id="search_input" type="text" placeholder="Search">
 								<ul>
 									<li id="knowledge"><a href="#">지식공유참여</a></li>
+									<!-- 로그인 했을 때 -->
 									{% if user.is_authenticated %}
-										<li>{{user.username}}</li>
-										<li><a href="{% url 'accounts:logout' %}">로그아웃</a></li>
+										<li id="username">{{user.username}} 님</li>
+										<li><a href="{% url 'accounts:logout' %}" id="logout">로그아웃</a></li>
+									<!-- 로그아웃 했을 때 -->
 									{% else %}
 										<li><a href="#" id="login">로그인</a></li>
 										<li><a href="{% url 'accounts:signup' %}" id="register">회원가입</a></li>
@@ -1344,59 +1346,66 @@
 							<div class="text_4">!!!!!!</div>
 						</div>
 					</div>
+					<div class="review_scroll">
+						<div class="scroll_top">
+							<span class="name">이종윤 님(수강생)</span>
+							<span class="date">8분 전</span>
+						</div>
+						<div class="scroll_bottom">
+							<a href="#" class="text_3"><h3>스프링 시큐리티 ></h3></a>
+							<div class="text_4">감사합니다.</div>
+						</div>
+					</div>
 				</div>
 			</section>
-			<section class="Image">
-				<div class="mainImage">
-					<div class="mainImageBox" style="background-image: url('{% static 'image/slideImage01.jpg' %}');">
-						<div class="subImageBox">
-							<h1 class="subtext_2">지식을 나눠주세요. <br>쉽게 시작하고 합당한 보상을 받을 수 있어요.</h1>
-							<button onclick="window.location href=#" class="mainImage_href_button">지식공유 알아보기</button><br><br>
-						</div>
-					</div>
-					<div class="mainImageBox" style="background-image: url('{% static 'image/slideImage02.jpg' %}');">
-						<div class="subImageBox">
-							<h1 class="subtext_2">모든 팀원이 인프런의 강의들을 <br>자유롭게 학습하는 환경을 제공해주세요.</h1>
-							<button onclick="window.location href=#" class="mainImage_href_button">비지니스 알아보기</button><br><br>
-						</div>
-					</div>
-					<div class="mainImageBox" style="background-image: url('{% static 'image/slideImage03.jpg' %}');">
-						<div class="subImageBox">
-							<h1 class="subtext_2">"저와 비슷한 사람 많을 거라고 생각했어요 "<br>인프런의 탄생 비하인드 스토리가 궁금하신가요?</h1>
-							<button onclick="window.location href=#" class="mainImage_href_button">인프런 탄생 스토리</button><br><br>
-						</div>
-					</div>
-					<div class="mainImageBox" style="background-image: url('{% static 'image/image_01.jpg' %}');">
-						<div class="subImageBox">
-							<h1 class="subtext_2">당신은 더 좋은 곳에 갈 수 있어요.<br/>지금 열려있는 채용공고를 확인해보세요.?</h1>
-							<button onclick="window.location href=#" class="mainImage_href_button">공고 확인하기</button><br><br>
-						</div>
-					</div>
+			<section>
+				<div class="slide">
+					<ul class="panel">
+						<li><div class="mainImageBox" style="background-image: url('static/image/mainImageslide1.jpg');">
+							<h2 class="subtext_4">지식을 나눠주세요. <br>쉽게 시작하고 합당한 보상을 받을 수 있어요.</h2>
+							 <button onclick="window.location href=#" class="mainImage_href_button">지식공유 알아보기</button></div>
+						</li>
+						<li><div class="mainImageBox" style="background-image: url('static/image/mainImageslide2.jpg');">
+							<h2 class="subtext_2">모든 팀원이 인프런의 강의들을 <br>자유롭게 학습하는 환경을 제공해주세요.</h2>
+							 <button onclick="window.location href=#" class="mainImage_href_button">비즈니스 알아보기</button></div>
+						</li>
+						<li><div class="mainImageBox" style="background-image: url('static/image/mainImageslide3.jpg');">
+							<h2 class="subtext_4">"저와 비슷한 사람 많을 거라고 생각했어요 "<br>인프런의 탄생 비하인드 스토리가 궁금하신가요?.</h2>
+							 <button onclick="window.location href=#" class="mainImage_href_button">인프런 탄생 스토리</button></div>
+						</li>
+					  </ul>
+					  <ul class="dot">
+						<li class="on">슬라이드 버튼1번</li>
+						<li>슬라이드 버튼2번</li>
+						<li>슬라이드 버튼3번</li>
+					  </ul>
 				</div>
 			</section>
 
 			<section class="Box">
-				<div class="mainHeader">
-					<div class="header">
-						<h3 class="text_2" >다양한 서비스를 신청하세요.</h3>
-						<div class="text_1" >인프런의 지식공유자 ˙ 비즈니스 ˙ 대학생 신청방법에 대해 알아보세요.</div>
+				<div id=mainHeaderBox>
+					<div class="mainHeader">
+						<div class="header">
+							<h3 class="text_2" >다양한 서비스를 신청하세요.</h3>
+							<div class="text_1" >인프런의 지식공유자 ˙ 비즈니스 ˙ 대학생 신청방법에 대해 알아보세요.</div>
+						</div>
 					</div>
-				</div>
-				<div class="mainBox">
-					<div id="Box_1">
-						<h4 class="subtext_1">지식 공유자 되기</h4>
-						<div class="text_1">9개월간 온라인 기술 강의로만 1억원!<br>나의 지식을 나눠 사람들에게 배움의 기회를 주고, 의미있는 대가를 가져가세요.<br><br></div>
-						<button onclick="window.location href=#" class="mainBox_href_button"><span class="mainBox_herf_button_1">지식공유자 참여하기 -> </span></button>
-					</div>
-					<div id="Box_2">
-						<h4 class="subtext_1">인프런 비지니스 신청</h4>
-						<div class="text_1">모든 팀원의 인프런의 강의들을 자유롭게 학습하는 환경을 제공해주세요.<br>업무 스킬에 집중된 콘텐츠를 통해 최신 트렌드의 업무역량을 습득할 수 있습니다.</div>
-						<button onclick="window.location href=#" class="mainBox_href_button"><span class="mainBox_herf_button_1">비지니스 신청하기 -> </span></button>
-					</div>
-					<div id="Box_3">
-						<h4 class="subtext_1">인프런 X 대학생</h4>
-						<div class="text_1">학교와 인프런이 함께 하여, 많은 학생 분들께 정해진 커리큘럼 이외에도 필요한 학습을 보완하고, 더욱 성장할 수 있도록 도와드립니다.<br><br>	</div>
-						<button onclick="window.location href=#" class="mainBox_href_button"><span class="mainBox_herf_button_1">대학생 신청하기 -> </span></button>
+					<div class="mainBox">
+						<div id="Box_1">
+							<h4 class="subtext_1">지식 공유자 되기</h4>
+							<div class="text_1">9개월간 온라인 기술 강의로만 1억원!<br>나의 지식을 나눠 사람들에게 배움의 기회를 주고, 의미있는 대가를 가져가세요.</div>
+							<button onclick="window.location href=#" class="mainBox_href_button"><span class="mainBox_herf_button_1">지식공유자 참여하기 -> </span></button>
+						</div>
+						<div id="Box_2">
+							<h4 class="subtext_1">인프런 비지니스 신청</h4>
+							<div class="text_1">모든 팀원의 인프런의 강의들을 자유롭게 학습하는 환경을 제공해주세요. 업무 스킬에 집중된 콘텐츠를 통해 최신 트렌드의 업무역량을 습득할 수 있습니다.</div>
+							<button onclick="window.location href=#" class="mainBox_href_button"><span class="mainBox_herf_button_1">비지니스 신청하기 -> </span></button>
+						</div>
+						<div id="Box_3">
+							<h4 class="subtext_1">인프런 X 대학생</h4>
+							<div class="text_1">학교와 인프런이 함께 하여, 많은 학생 분들께 정해진 커리큘럼 이외에도 필요한 학습을 보완하고, 더욱 성장할 수 있도록 도와드립니다.</div>
+							<button onclick="window.location href=#" class="mainBox_href_button"><span class="mainBox_herf_button_1">대학생 신청하기 -> </span></button>
+						</div>
 					</div>
 				</div>
 			</section>
@@ -1453,7 +1462,7 @@
 							<div class="footer_left_top">
 								<div>
 									<p>
-										<img src="{% static 'image/logo02.png' %}"><span class="footer_divider"></span>
+										<img  src="{% static 'image/logo02.png' %}"><span class="footer_divider"></span>
 										<a href="#">개인정보취급 방침</a><span class="footer_divider"></span>
 										<a href="#">이용약관</a>
 									</p>
@@ -1469,16 +1478,21 @@
 						</div> <!-- footer_left 끝 -->
 						<div class="footer_right">
 							<div class="footer_iconBox">
-								<a href="https://post.naver.com/inflearn"><img src="{% static 'image/naver.png' %}"></a>
-								<a href="https://blog.naver.com/inflearn"><img src="{% static 'image/blog.png' %}"></a>
-								<a href="https://www.instagram.com/inflearn__official/"><img src="{% static 'image/instagram.png' %}"></a>
-								<a href="https://www.youtube.com/channel/UC0Y0T9JpgIBbyGDjvy9PbOg"><img src="{% static 'image/youtube.png' %}"></a>
-								<a href="https://www.facebook.com/inflearn"><img src="{% static 'image/facebook.png' %}"></a>
+								<a href="https://post.naver.com/inflearn"><img  src="{% static 'image/naver.png' %}"></a>
+								<a href="https://blog.naver.com/inflearn"><img  src="{% static 'image/blog.png' %}"></a>
+								<a href="https://www.instagram.com/inflearn__official/"><img  src="{% static 'image/instagram.png' %}"></a>
+								<a href="https://www.youtube.com/channel/UC0Y0T9JpgIBbyGDjvy9PbOg"><img  src="{% static 'image/youtube.png' %}"></a>
+								<a href="https://www.facebook.com/inflearn"><img  src="{% static 'image/facebook.png' %}"></a>
 							</div>
 						</div> <!-- footer_right 끝 -->
 					</div> <!-- footer info 끝-->
 				</div>
 			</footer>
 		</div> <!-- wrap 끝 -->
+					<!-- 문의하기 -->
+		<div id="inquire">
+			<div id="inquire_text">문의하기</div>
+			<div id="inquire_img"></div>
+		</div>
 	</body>
 </html>

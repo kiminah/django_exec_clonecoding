@@ -73,10 +73,10 @@ $(function(){
         function(){
             icon_class=$(this).attr('class');
             if(icon_class=='addCart'){
-                $('.'+icon_class).attr('src','image/cart02.png')
+                $('.'+icon_class).attr('src','static/image/cart02.png')
                 $('.'+icon_class).before( '<p>바구니에 추가하기</p>' )
             }else if(icon_class=='addHeart'){
-                $('.'+icon_class).attr('src','image/heart02.png')
+                $('.'+icon_class).attr('src','static/image/heart02.png')
                 $('.'+icon_class).before( '<p>위시리스트에 추가하기</p>' )
             }else{
                 $('.'+icon_class).before( '<p>내 목록에 추가</p>' )
@@ -85,9 +85,9 @@ $(function(){
         },
         function(){
             if(icon_class=='addCart'){
-                $('.'+icon_class).attr('src','image/cart.png')
+                $('.'+icon_class).attr('src','static/image/cart.png')
             }else if(icon_class=='addHeart'){
-                $('.'+icon_class).attr('src','image/heart.png')
+                $('.'+icon_class).attr('src','static/image/heart.png')
             }
             $('.hoverMenu>div>p').remove(); // hover 시 생성된 <p> 제거
         }

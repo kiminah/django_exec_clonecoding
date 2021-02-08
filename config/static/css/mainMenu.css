@@ -88,3 +88,15 @@
     position:fixed;
     top:0px;
 }
+
+/* 로그인 했을 때의 상태 */
+/* 로그인 상태에서의 header */
+#username{font-weight:bold;}
+#logout {
+    border: 1px solid;
+    padding: 6px 8px;
+    color:#fff;
+    background: #ff7867;
+    border-radius: 4px;
+    border: 1px solid #dbdbdb;
+}
